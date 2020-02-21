@@ -33,6 +33,7 @@ clear_folder('result/ipad/10_5')
 clear_folder('result/ipad/9_7')
 clear_folder('result/ipad/7_9')
 clear_folder('result/ipad/7_9')
+clear_folder('result/ipad/12_9')
 clear_folder('result/watch/42')
 clear_folder('result/watch/38')
 
@@ -41,7 +42,7 @@ files = os.listdir('screenshots/')
 screenshot_files = ['screenshots/' + f for f in files if f.endswith('.png')]
 
 
-portrait = True
+portrait = False
 
 for s in screenshot_files:
     convert_to(s, 640, 920, 'result/iphone/3_5', portrait)
@@ -53,6 +54,7 @@ for s in screenshot_files:
     convert_to(s, 2048, 2732, 'result/ipad/12_9', portrait)
     convert_to(s, 1668, 2224, 'result/ipad/10_5', portrait)
     convert_to(s, 1536, 2048, 'result/ipad/9_7', portrait)
+    convert_to(s, 2048, 2732, 'result/ipad/12_9', portrait) 
     convert_to(s, 1536, 2048, 'result/ipad/7_9', portrait)
     convert_to(s, 312, 390, 'result/watch/42', portrait)
     convert_to(s, 272, 340, 'result/watch/38', portrait)
